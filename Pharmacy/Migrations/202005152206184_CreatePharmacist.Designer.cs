@@ -7,13 +7,13 @@ namespace Pharmacy.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CreatePharmacistTable : IMigrationMetadata
+    public sealed partial class CreatePharmacist : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreatePharmacistTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreatePharmacist));
         
         string IMigrationMetadata.Id
         {
-            get { return "202005152155372_CreatePharmacistTable"; }
+            get { return "202005152206184_CreatePharmacist"; }
         }
         
         string IMigrationMetadata.Source

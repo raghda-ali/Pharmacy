@@ -7,7 +7,9 @@ using System.Data.Entity;
 
 namespace Pharmacy.Models
 {
-    public class MyDBContext : DbContext { public MyDBContext() { } }
+    public class MyDBContext : DbContext { public MyDBContext() { }
+        public DbSet<Pharmacist> pharmacists { get; set; }
+    }
 
 
 }
