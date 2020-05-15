@@ -9,6 +9,7 @@ namespace Pharmacy.Models
 {
     public class MyDBContext : DbContext { public MyDBContext() { }
         public DbSet<Pharmacist> pharmacists { get; set; }
+        public DbSet<Medicine> medicines { get; set; }
     }
 
 
