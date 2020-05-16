@@ -7,7 +7,7 @@
 <div id="login-div">
     @using (Html.BeginForm("LoginPharmacist", "Login", FormMethod.Post))
     {
-
+        @Html.HiddenFor(model => model.id)
         <div class="form-group">
             @Html.LabelFor(model => model.Username)
             @Html.EditorFor(model => model.Username)
