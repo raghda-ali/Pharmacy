@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddMedicinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\registerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,6 +188,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\register\Index.cshtml" />
+    <Content Include="Views\AddMedicines\Create.cshtml" />
+    <Content Include="Views\AddMedicines\Details.cshtml" />
+    <Content Include="Views\AddMedicines\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
