@@ -26,7 +26,7 @@ namespace Pharmacy.Controllers
                 else
                 {
                     Session["id"] = pharmacist.id;
-                    return RedirectToAction("Contact", "About");
+                    return RedirectToAction("Contact","About");
                 }
             }
         }
