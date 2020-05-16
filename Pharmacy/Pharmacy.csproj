@@ -141,6 +141,7 @@
     <Compile Include="Migrations\202005152212243_CreateMedicineTable.designer.cs">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\AddPharmacistsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -191,6 +192,8 @@
     <Content Include="Views\AddMedicines\Create.cshtml" />
     <Content Include="Views\AddMedicines\Details.cshtml" />
     <Content Include="Views\AddMedicines\Index.cshtml" />
+    <Content Include="Views\AddPharmacists\Create.cshtml" />
+    <Content Include="Views\AddPharmacists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
