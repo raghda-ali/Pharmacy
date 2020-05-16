@@ -18,7 +18,7 @@ namespace Pharmacy.Controllers
         {
             using (MyDBContext db = new MyDBContext())
             {
-                var pharmacistdetails = db.pharmacists.Where( model => model.Username == pharmacist.Username && model.Password == pharmacist.Password && model.Firstname == pharmacist.Firstname && model.Lastname == pharmacist.Lastname && model.Email == pharmacist.Email).FirstOrDefault();
+                var pharmacistdetails = db.pharmacists.Where( c=> c.Username == pharmacist.Username && c.Password == pharmacist.Password && c.Firstname == pharmacist.Firstname && c.Lastname == pharmacist.Lastname && c.Email == pharmacist.Email).FirstOrDefault();
                 if (pharmacistdetails == null)
                 {
                     return View("LoginPharmacist", pharmacist);
@@ -26,7 +26,7 @@ namespace Pharmacy.Controllers
                 else
                 {
                     Session["id"] = pharmacist.id;
-                    return RedirectToAction("Contact","About");
+                    return RedirectToAction("LoginPharmacist");
                 }
             }
         }
