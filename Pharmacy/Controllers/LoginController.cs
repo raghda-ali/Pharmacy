@@ -18,7 +18,7 @@ namespace Pharmacy.Controllers
         {
             using (MyDBContext db = new MyDBContext())
             {
-                var pharmacistdetails = db.pharmacists.Where(x => x.Username == pharmacist.Username && x.Password == pharmacist.Password).FirstOrDefault();
+                var pharmacistdetails = db.pharmacists.Where(x => x.Username == pharmacist.Username && x.Password == pharmacist.Password && x.Firstname == pharmacist.Firstname && x.Lastname == pharmacist.Lastname && x.Email == pharmacist.Email).FirstOrDefault();
                 if (pharmacistdetails == null)
                 {
                     return View("LoginPharmacist", pharmacist);
