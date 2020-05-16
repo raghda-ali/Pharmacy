@@ -9,6 +9,7 @@ namespace Pharmacy.Controllers
 {
     public class LoginController : Controller
     {
+        MyDBContext db = new MyDBContext();
         // GET: Login
         public ActionResult Login()
         {
