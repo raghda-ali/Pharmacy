@@ -5,8 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-//using System.Data.Entity;
-//using Pharmacy.Models;
+
 namespace Pharmacy
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -17,7 +16,6 @@ namespace Pharmacy
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            //Database.SetInitializer<MyDBContext>(new DropCreateDatabaseIfModelChanges<MyDBContext>());
         }
     }
 }
