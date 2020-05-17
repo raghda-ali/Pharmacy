@@ -15,7 +15,7 @@ namespace Pharmacy.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Pharmacy.Models.Pharmacist pharmacist)
+        public ActionResult Authorise(Pharmacist pharmacist)
         {
             using (MyDBContext db = new MyDBContext())
             {
