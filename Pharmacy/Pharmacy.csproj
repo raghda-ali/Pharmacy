@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202005152212243_CreateMedicineTable.designer.cs">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005170959533_Updates.cs" />
+    <Compile Include="Migrations\202005170959533_Updates.designer.cs">
+      <DependentUpon>202005170959533_Updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -210,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005152212243_CreateMedicineTable.resx">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005170959533_Updates.resx">
+      <DependentUpon>202005170959533_Updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
