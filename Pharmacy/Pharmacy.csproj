@@ -145,6 +145,10 @@
     <Compile Include="Migrations\202005170959533_Updates.designer.cs">
       <DependentUpon>202005170959533_Updates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005171104371_updates2.cs" />
+    <Compile Include="Migrations\202005171104371_updates2.designer.cs">
+      <DependentUpon>202005171104371_updates2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -217,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005170959533_Updates.resx">
       <DependentUpon>202005170959533_Updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005171104371_updates2.resx">
+      <DependentUpon>202005171104371_updates2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
