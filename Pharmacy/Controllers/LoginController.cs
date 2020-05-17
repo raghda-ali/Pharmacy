@@ -9,17 +9,18 @@ namespace Pharmacy.Controllers
 {
     public class LoginController : Controller
     {
-        MyDBContext db = new MyDBContext();
         // GET: Login
         public ActionResult Login()
         {
             return View();
         }
+
+        [HttpPost]
         public ActionResult LoginPharmacist(Pharmacy.Models.Pharmacist pharmacist)
         {
             using (MyDBContext db = new MyDBContext())
             {
-                var pharmacistdetails = db.pharmacists.Where( c=> c.Username == pharmacist.Username && c.Password == pharmacist.Password && c.Firstname == pharmacist.Firstname && c.Lastname == pharmacist.Lastname && c.Email == pharmacist.Email).FirstOrDefault();
+                var pharmacistdetails = db.pharmacists.Where(c => c.Username == pharmacist.Username && c.Password == pharmacist.Password && c.Firstname == pharmacist.Firstname && c.Lastname == pharmacist.Lastname && c.Email == pharmacist.Email).FirstOrDefault();
                 if (pharmacistdetails == null)
                 {
                     return View("LoginPharmacist", pharmacist);
