@@ -14,12 +14,16 @@ namespace Pharmacy.Models
         [Required(ErrorMessage ="This field is required.")]
         public string Username { get; set; }
         [DisplayName("Password")]
+        [Required(ErrorMessage = "This field is required.")]
         public string Password { get; set; }
         [DisplayName("First Name")]
+        [Required(ErrorMessage = "This field is required.")]
         public string Firstname { get; set; }
         [DisplayName("Last Name")]
+        [Required(ErrorMessage = "This field is required.")]
         public string Lastname { get; set; }
         [DisplayName("Email")]
+        [Required(ErrorMessage = "This field is required.")]
         public string Email { get; set; }
     }
 }
