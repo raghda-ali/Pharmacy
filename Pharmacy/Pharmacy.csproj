@@ -127,8 +127,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddMedicinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\registerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -141,14 +141,7 @@
     <Compile Include="Migrations\202005152212243_CreateMedicineTable.designer.cs">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005170959533_Updates.cs" />
-    <Compile Include="Migrations\202005170959533_Updates.designer.cs">
-      <DependentUpon>202005170959533_Updates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005171104371_updates2.cs" />
-    <Compile Include="Migrations\202005171104371_updates2.designer.cs">
-      <DependentUpon>202005171104371_updates2.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\AddPharmacistsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -196,7 +189,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\register\Index.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\AddMedicines\Create.cshtml" />
+    <Content Include="Views\AddMedicines\Details.cshtml" />
+    <Content Include="Views\AddMedicines\Index.cshtml" />
+    <Content Include="Views\AddPharmacists\Create.cshtml" />
+    <Content Include="Views\AddPharmacists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -218,12 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005152212243_CreateMedicineTable.resx">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005170959533_Updates.resx">
-      <DependentUpon>202005170959533_Updates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005171104371_updates2.resx">
-      <DependentUpon>202005171104371_updates2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
