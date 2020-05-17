@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddMedicinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\registerController.cs" />
     <Compile Include="Controllers\UpdatePharmacistsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -141,6 +142,10 @@
     <Compile Include="Migrations\202005152212243_CreateMedicineTable.cs" />
     <Compile Include="Migrations\202005152212243_CreateMedicineTable.designer.cs">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005172348453_lastupdate.cs" />
+    <Compile Include="Migrations\202005172348453_lastupdate.designer.cs">
+      <DependentUpon>202005172348453_lastupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AddPharmacistsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -197,6 +202,7 @@
     <Content Include="Views\AddPharmacists\Index.cshtml" />
     <Content Include="Views\UpdatePharmacists\Edit.cshtml" />
     <Content Include="Views\UpdatePharmacists\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005152212243_CreateMedicineTable.resx">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005172348453_lastupdate.resx">
+      <DependentUpon>202005172348453_lastupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
