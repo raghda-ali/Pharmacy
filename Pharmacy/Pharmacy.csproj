@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddMedicinesController.cs" />
+    <Compile Include="Controllers\DeletePharmacistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\registerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -191,6 +192,9 @@
     <Content Include="Views\AddMedicines\Create.cshtml" />
     <Content Include="Views\AddMedicines\Details.cshtml" />
     <Content Include="Views\AddMedicines\Index.cshtml" />
+    <Content Include="Views\DeletePharmacists\Delete.cshtml" />
+    <Content Include="Views\DeletePharmacists\Details.cshtml" />
+    <Content Include="Views\DeletePharmacists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
