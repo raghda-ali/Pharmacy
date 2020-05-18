@@ -6,6 +6,48 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .dropbtn {
+            background-color:#808080;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:#f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #808080;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color:#808080;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -19,17 +61,26 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+                <div class="dropdown">
+                    <button class="dropbtn">Medicine</button>
+                    <div class="dropdown-content">
+                        <a href="#">@Html.ActionLink("Add Medicine", "Index", "AddMedicines")</a>
+                        <a href="#">@Html.ActionLink("Update Medicine", "Index", "UpdateMedicines")</a>
+                        <a href="#">@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</a>
+                    </div>
+                </div>
+                
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Add Medicine", "Index", "AddMedicines")</li>
-                    <li>@Html.ActionLink("Add Pharmacist", "Index", "AddPharmacists")</li>
-                    <li>@Html.ActionLink("Update Pharmacist", "Index", "UpdatePharmacists")</li>
-                    <li>@Html.ActionLink("Update Medicine", "Index", "UpdateMedicines")</li>
-                    <li>@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</li>
-
+                    @*<li>@Html.ActionLink("Add Medicine", "Index", "AddMedicines")</li>
+            <li>@Html.ActionLink("Add Pharmacist", "Index", "AddPharmacists")</li>
+            <li>@Html.ActionLink("Update Pharmacist", "Index", "UpdatePharmacists")</li>
+            <li>@Html.ActionLink("Update Medicine", "Index", "UpdateMedicines")</li>
+            <li>@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</li>*@
                 </ul>
+
             </div>
         </div>
     </div>
