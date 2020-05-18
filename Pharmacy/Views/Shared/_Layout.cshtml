@@ -69,7 +69,14 @@
                         <a href="#">@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</a>
                     </div>
                 </div>
-                
+                <div class="dropdown">
+                    <button class="dropbtn">Pharmacist</button>
+                    <div class="dropdown-content">
+                        <a href="#">@Html.ActionLink("Add Pharmacist", "Index", "AddPharmacists")</a>
+                        <a href="#">@Html.ActionLink("Update Pharmacist", "Index", "UpdatePharmacists")</a>
+                    </div>
+                </div>
+
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
