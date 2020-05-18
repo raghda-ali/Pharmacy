@@ -10,17 +10,17 @@ using Pharmacy.Models;
 
 namespace Pharmacy.Controllers
 {
-    public class DeleteMedicinesController : Controller
+    public class UpdateMedicinesController : Controller
     {
         private MyDBContext db = new MyDBContext();
 
-        // GET: DeleteMedicines
+        // GET: UpdateMedicines
         public ActionResult Index()
         {
             return View(db.medicines.ToList());
         }
 
-        // GET: DeleteMedicines/Details/5
+        // GET: UpdateMedicines/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace Pharmacy.Controllers
             return View(medicine);
         }
 
-        // GET: DeleteMedicines/Create
+        // GET: UpdateMedicines/Create
         //public ActionResult Create()
         //{
         //    return View();
         //}
 
-        //// POST: DeleteMedicines/Create
+        //// POST: UpdateMedicines/Create
         //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
@@ -58,39 +58,8 @@ namespace Pharmacy.Controllers
         //    return View(medicine);
         //}
 
-        //// GET: DeleteMedicines/Edit/5
-        //public ActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Medicine medicine = db.medicines.Find(id);
-        //    if (medicine == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(medicine);
-        //}
-
-        //// POST: DeleteMedicines/Edit/5
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit([Bind(Include = "id,name,quantity,price")] Medicine medicine)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(medicine).State = EntityState.Modified;
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(medicine);
-        //}
-
-        // GET: DeleteMedicines/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: UpdateMedicines/Edit/5
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -104,16 +73,47 @@ namespace Pharmacy.Controllers
             return View(medicine);
         }
 
-        // POST: DeleteMedicines/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: UpdateMedicines/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult Edit([Bind(Include = "id,name,quantity,price")] Medicine medicine)
         {
-            Medicine medicine = db.medicines.Find(id);
-            db.medicines.Remove(medicine);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                db.Entry(medicine).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(medicine);
         }
+
+        // GET: UpdateMedicines/Delete/5
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Medicine medicine = db.medicines.Find(id);
+        //    if (medicine == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(medicine);
+        //}
+
+        //// POST: UpdateMedicines/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    Medicine medicine = db.medicines.Find(id);
+        //    db.medicines.Remove(medicine);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
         protected override void Dispose(bool disposing)
         {
