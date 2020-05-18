@@ -7,13 +7,13 @@ namespace Pharmacy.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Updates : IMigrationMetadata
+    public sealed partial class lastupdate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Updates));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(lastupdate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202005170959533_Updates"; }
+            get { return "202005172348453_lastupdate"; }
         }
         
         string IMigrationMetadata.Source

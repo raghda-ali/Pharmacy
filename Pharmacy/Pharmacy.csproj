@@ -128,10 +128,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddMedicinesController.cs" />
-    <Compile Include="Controllers\DeleteMedicinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\registerController.cs" />
+    <Compile Include="Controllers\UpdatePharmacistsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,13 +143,9 @@
     <Compile Include="Migrations\202005152212243_CreateMedicineTable.designer.cs">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005170959533_Updates.cs" />
-    <Compile Include="Migrations\202005170959533_Updates.Designer.cs">
-      <DependentUpon>202005170959533_Updates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005171104371_updates2.cs" />
-    <Compile Include="Migrations\202005171104371_updates2.Designer.cs">
-      <DependentUpon>202005171104371_updates2.cs</DependentUpon>
+    <Compile Include="Migrations\202005172348453_lastupdate.cs" />
+    <Compile Include="Migrations\202005172348453_lastupdate.designer.cs">
+      <DependentUpon>202005172348453_lastupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AddPharmacistsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -163,8 +159,6 @@
     <Content Include="App_Data\Pharmacy.Models.MyDBContext_log.ldf">
       <DependentUpon>Pharmacy.Models.MyDBContext.mdf</DependentUpon>
     </Content>
-    <Content Include="bin\Pharmacy.dll" />
-    <Content Include="bin\Pharmacy.pdb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -173,16 +167,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="obj\Debug\Pharmacy.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Pharmacy.dll" />
-    <Content Include="obj\Debug\Pharmacy.pdb" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\Pharmacy.csproj.CopyComplete" />
-    <Content Include="obj\Debug\Pharmacy.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\Pharmacy.csproj.GenerateResource.cache" />
-    <Content Include="obj\Debug\Pharmacy.csprojAssemblyReference.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -209,19 +195,16 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\register\Index.cshtml" />
-    <Content Include="Views\DeleteMedicines\Delete.cshtml" />
-    <Content Include="Views\DeleteMedicines\Details.cshtml" />
-    <Content Include="Views\DeleteMedicines\Index.cshtml" />
-    <Content Include="Views\AddPharmacists\Create.cshtml" />
-    <Content Include="Views\AddPharmacists\Index.cshtml" />
     <Content Include="Views\AddMedicines\Create.cshtml" />
     <Content Include="Views\AddMedicines\Details.cshtml" />
     <Content Include="Views\AddMedicines\Index.cshtml" />
+    <Content Include="Views\AddPharmacists\Create.cshtml" />
+    <Content Include="Views\AddPharmacists\Index.cshtml" />
+    <Content Include="Views\UpdatePharmacists\Edit.cshtml" />
+    <Content Include="Views\UpdatePharmacists\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -242,16 +225,9 @@
     <EmbeddedResource Include="Migrations\202005152212243_CreateMedicineTable.resx">
       <DependentUpon>202005152212243_CreateMedicineTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005170959533_Updates.resx">
-      <DependentUpon>202005170959533_Updates.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005172348453_lastupdate.resx">
+      <DependentUpon>202005172348453_lastupdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005171104371_updates2.resx">
-      <DependentUpon>202005171104371_updates2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.CreateMedicineTable.resources" />
-    <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.CreatePharmacist.resources" />
-    <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.Updates.resources" />
-    <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.updates2.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -15,19 +15,19 @@ namespace Pharmacy.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Pharmacy.Models.Pharmacist pharmacist)
+        public ActionResult Authorise(Pharmacist pharmacist)
         {
             using (MyDBContext db = new MyDBContext())
             {
                 var pharmacistdetails = db.pharmacists.Where(c => c.Username == pharmacist.Username && c.Password == pharmacist.Password && c.Firstname == pharmacist.Firstname && c.Lastname == pharmacist.Lastname && c.Email == pharmacist.Email).FirstOrDefault();
                 if (pharmacistdetails == null)
                 {
-                    return View("Index",pharmacist);
+                    return View("Index", pharmacist);
                 }
                 else
                 {
                     Session["id"] = pharmacist.id;
-                    return RedirectToAction("About", "Home");
+                    return RedirectToAction("Create", "AddMedicines");
                 }
             }
         }
