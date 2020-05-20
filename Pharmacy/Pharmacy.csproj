@@ -150,10 +150,15 @@
     <Compile Include="Migrations\202005172348453_lastupdate.designer.cs">
       <DependentUpon>202005172348453_lastupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005192231281_CreateTableOrder.cs" />
+    <Compile Include="Migrations\202005192231281_CreateTableOrder.designer.cs">
+      <DependentUpon>202005192231281_CreateTableOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AddPharmacistsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\MyDBContext.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Pharmacist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -325,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005172348453_lastupdate.resx">
       <DependentUpon>202005172348453_lastupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005192231281_CreateTableOrder.resx">
+      <DependentUpon>202005192231281_CreateTableOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.CreateMedicineTable.resources" />
     <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.CreatePharmacist.resources" />
