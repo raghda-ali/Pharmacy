@@ -315,10 +315,12 @@
     <Content Include="Views\DeletePharmacists\Index.cshtml" />
     <Content Include="Views\AddOrder\Create.cshtml" />
     <Content Include="Views\AddOrder\Index.cshtml" />
+    <Content Include="Views\UpdateOrder\Index.cshtml" />
+    <Content Include="Views\UpdateOrder\Details.cshtml" />
+    <Content Include="Views\UpdateOrder\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\UpdateOrder\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

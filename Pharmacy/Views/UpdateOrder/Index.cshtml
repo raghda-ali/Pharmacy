@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Pharmacy.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Update order</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.medicine_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.amount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.medicine_id }) |
+               
+            </td>
+        </tr>
+    }
+
+</table>
+
