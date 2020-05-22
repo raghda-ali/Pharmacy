@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddMedicinesController.cs" />
+    <Compile Include="Controllers\AddOrderController.cs" />
     <Compile Include="Controllers\deleteMedicinesController.cs" />
     <Compile Include="Controllers\DeletePharmacistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -304,6 +305,8 @@
     <Content Include="Views\DeletePharmacists\Delete.cshtml" />
     <Content Include="Views\DeletePharmacists\Details.cshtml" />
     <Content Include="Views\DeletePharmacists\Index.cshtml" />
+    <Content Include="Views\AddOrder\Create.cshtml" />
+    <Content Include="Views\AddOrder\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
