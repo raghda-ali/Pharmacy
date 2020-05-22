@@ -12,60 +12,77 @@ namespace Pharmacy.Controllers
 {
     public class UpdateOrderController : Controller
     {
+        private MyDBContext db = new MyDBContext();
         // GET: UpdateOrder
         public ActionResult Index()
         {
-            return View();
+            return View(db.orders.ToList());
         }
 
         // GET: UpdateOrder/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Order order = db.orders.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+            return View(order);
         }
 
         // GET: UpdateOrder/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+       // public ActionResult Create()
+      //  {
+        //    return View();
+       // }
 
         // POST: UpdateOrder/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
+      //  [HttpPost]
+      //  public ActionResult Create(FormCollection collection)
+   //     {
+     //try
+      //      {
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //        return RedirectToAction("Index");
+          //  }
+           // catch
+            //{
+              //  return View();
+            //}
+       // }
 
         // GET: UpdateOrder/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Order order = db.orders.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+            return View(order);
         }
 
         // POST: UpdateOrder/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "medicine_id,total_price,amount")] Order order)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                db.Entry(order).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(order);
         }
 
         // GET: UpdateOrder/Delete/5
@@ -75,19 +92,27 @@ namespace Pharmacy.Controllers
         }
 
         // POST: UpdateOrder/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
+        // [HttpPost]
+        //    public ActionResult Delete(int id, FormCollection collection)
+        //  {
+        //    try
+        //  {
+        // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
+        //    return RedirectToAction("Index");
+        // }
+        // catch
+        // {
+        //   return View();
+        //  }
+        // }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
             {
-                return View();
+                db.Dispose();
             }
+            base.Dispose(disposing);
         }
     }
 }
