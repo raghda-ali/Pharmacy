@@ -97,6 +97,9 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        <div>
+            <a href="#">@Html.ActionLink("Logout", "Index", "Home")</a>
+        </div>
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
