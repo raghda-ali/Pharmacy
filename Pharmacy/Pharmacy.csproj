@@ -319,10 +319,8 @@
     <Content Include="Views\UpdateOrder\Index.cshtml" />
     <Content Include="Views\UpdateOrder\Details.cshtml" />
     <Content Include="Views\UpdateOrder\Edit.cshtml" />
-    <Content Include="Views\deleteOrders\Create.cshtml" />
     <Content Include="Views\deleteOrders\Delete.cshtml" />
     <Content Include="Views\deleteOrders\Details.cshtml" />
-    <Content Include="Views\deleteOrders\Edit.cshtml" />
     <Content Include="Views\deleteOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
