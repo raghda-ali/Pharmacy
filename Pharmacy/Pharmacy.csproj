@@ -328,10 +328,8 @@
     <Content Include="Views\deleteOrders\Delete.cshtml" />
     <Content Include="Views\deleteOrders\Details.cshtml" />
     <Content Include="Views\deleteOrders\Index.cshtml" />
-    <Content Include="Views\deleteCustomers\Create.cshtml" />
     <Content Include="Views\deleteCustomers\Delete.cshtml" />
     <Content Include="Views\deleteCustomers\Details.cshtml" />
-    <Content Include="Views\deleteCustomers\Edit.cshtml" />
     <Content Include="Views\deleteCustomers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
