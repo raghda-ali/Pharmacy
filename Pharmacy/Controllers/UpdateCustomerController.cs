@@ -1,23 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Pharmacy.Models;
 
 namespace Pharmacy.Controllers
 {
     public class UpdateCustomerController : Controller
     {
+        private MyDBContext db = new MyDBContext();
         // GET: UpdateCustomer
         public ActionResult Index()
         {
-            return View();
+            return View(db.customers.ToList());
         }
 
         // GET: UpdateCustomer/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Customer customer = db.customers.Find(id);
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(customer);
         }
 
         // GET: UpdateCustomer/Create

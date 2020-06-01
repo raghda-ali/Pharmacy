@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Pharmacy.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Update Customers</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfOrders)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfOrders)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) 
+           
+        </td>
+    </tr>
+}
+
+</table>
+<div>
+    <a href="#">@Html.ActionLink("Logout", "Index", "Home")</a>
+</div>

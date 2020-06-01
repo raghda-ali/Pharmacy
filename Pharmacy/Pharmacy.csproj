@@ -332,10 +332,11 @@
     <Content Include="Views\deleteCustomers\Delete.cshtml" />
     <Content Include="Views\deleteCustomers\Details.cshtml" />
     <Content Include="Views\deleteCustomers\Index.cshtml" />
+    <Content Include="Views\UpdateCustomer\Index.cshtml" />
+    <Content Include="Views\UpdateCustomer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\UpdateCustomer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
