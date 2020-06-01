@@ -57,25 +57,32 @@ namespace Pharmacy.Controllers
         }*/
 
         // GET: UpdateCustomer/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Customer customer = db.customers.Find(id);
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(customer);
         }
 
         // POST: UpdateCustomer/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "id,Customer_name,NumberOfOrders")] Customer customer)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                db.Entry(customer).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(customer);
         }
 
         // GET: UpdateCustomer/Delete/5
@@ -85,19 +92,27 @@ namespace Pharmacy.Controllers
         }
 
         // POST: UpdateCustomer/Delete/5
-      /*  [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
+        /*  [HttpPost]
+          public ActionResult Delete(int id, FormCollection collection)
+          {
+              try
+              {
+                  // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
+                  return RedirectToAction("Index");
+              }
+              catch
+              {
+                  return View();
+              }
+          }*/
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
             {
-                return View();
+                db.Dispose();
             }
-        }*/
+            base.Dispose(disposing);
+        }
     }
 }

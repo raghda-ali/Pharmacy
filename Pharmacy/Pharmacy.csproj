@@ -334,6 +334,7 @@
     <Content Include="Views\deleteCustomers\Index.cshtml" />
     <Content Include="Views\UpdateCustomer\Index.cshtml" />
     <Content Include="Views\UpdateCustomer\Details.cshtml" />
+    <Content Include="Views\UpdateCustomer\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
