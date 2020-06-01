@@ -145,6 +145,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\registerController.cs" />
+    <Compile Include="Controllers\UpdateCustomerController.cs" />
     <Compile Include="Controllers\UpdateMedicinesController.cs" />
     <Compile Include="Controllers\UpdateOrderController.cs" />
     <Compile Include="Controllers\UpdatePharmacistsController.cs" />
@@ -325,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Views\UpdateCustomer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
