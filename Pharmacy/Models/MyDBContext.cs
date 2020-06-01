@@ -11,6 +11,7 @@ namespace Pharmacy.Models
         public DbSet<Pharmacist> pharmacists { get; set; }
         public DbSet<Medicine> medicines { get; set; }
         public DbSet<Order> orders { get; set; }
+        public DbSet<Customer> customers { get; set; }
 
     }
 
