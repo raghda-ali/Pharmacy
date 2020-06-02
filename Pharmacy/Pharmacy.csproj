@@ -163,12 +163,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AddMedicinesController.cs" />
     <Compile Include="Controllers\AddOrderController.cs" />
+    <Compile Include="Controllers\deleteCustomersController.cs" />
     <Compile Include="Controllers\deleteMedicinesController.cs" />
     <Compile Include="Controllers\deleteOrdersController.cs" />
     <Compile Include="Controllers\DeletePharmacistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\registerController.cs" />
+    <Compile Include="Controllers\UpdateCustomerController.cs" />
     <Compile Include="Controllers\UpdateMedicinesController.cs" />
     <Compile Include="Controllers\UpdateOrderController.cs" />
     <Compile Include="Controllers\UpdatePharmacistsController.cs" />
@@ -196,8 +198,13 @@
     <Compile Include="Migrations\202005192231281_CreateTableOrder.designer.cs">
       <DependentUpon>202005192231281_CreateTableOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006011654072_AddTableCustomer.cs" />
+    <Compile Include="Migrations\202006011654072_AddTableCustomer.designer.cs">
+      <DependentUpon>202006011654072_AddTableCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AddPharmacistsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\MyDBContext.cs" />
     <Compile Include="Models\Order.cs" />
@@ -386,6 +393,12 @@
     <Content Include="Views\deleteOrders\Delete.cshtml" />
     <Content Include="Views\deleteOrders\Details.cshtml" />
     <Content Include="Views\deleteOrders\Index.cshtml" />
+    <Content Include="Views\deleteCustomers\Delete.cshtml" />
+    <Content Include="Views\deleteCustomers\Details.cshtml" />
+    <Content Include="Views\deleteCustomers\Index.cshtml" />
+    <Content Include="Views\UpdateCustomer\Index.cshtml" />
+    <Content Include="Views\UpdateCustomer\Details.cshtml" />
+    <Content Include="Views\UpdateCustomer\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
@@ -415,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005192231281_CreateTableOrder.resx">
       <DependentUpon>202005192231281_CreateTableOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006011654072_AddTableCustomer.resx">
+      <DependentUpon>202006011654072_AddTableCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.CreateMedicineTable.resources" />
     <EmbeddedResource Include="obj\Debug\Pharmacy.Migrations.CreatePharmacist.resources" />

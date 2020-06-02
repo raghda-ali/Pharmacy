@@ -67,7 +67,6 @@
                         <a href="#">@Html.ActionLink("Add Medicine", "Index", "AddMedicines")</a>
                         <a href="#">@Html.ActionLink("Update Medicine", "Index", "UpdateMedicines")</a>
                         <a href="#">@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</a>
-                        @*<asp:Button OnClick="showreport.aspx" Text="Make Report" runat="server" />*@
                     </div>
                 </div>
                 <div class="dropdown">
@@ -86,42 +85,26 @@
                         <a href="#">@Html.ActionLink("Delete Order", "Index", "deleteOrders")</a>
                     </div>
                 </div>
-                
+                <div class="dropdown">
+                    <button class="dropbtn">Customer</button>
+                    <div class="dropdown-content">
+                        <a href="#">@Html.ActionLink("Update Customer", "Index", "UpdateCustomer")</a>
+                        <a href="#">@Html.ActionLink("Delete Customer", "Index", "deleteCustomers")</a>
+                    </div>
+                </div>
 
-                    <li class="btn btn-primary btn-sm" data-target="Response.Redirect("~/showreport.aspx");"> make report</li>
-
-
-                
-                @*<div>
-                <script runat="server">
-                    private void ButtonWasClicked(object sender, EventArgs e)
-                    {
-                    Response.Redirect("showreport.aspx")
-                    }
-                </script>
-
-                
-
-                    <form id="frmExercise" method="post" runat="server">
-                        <asp:Button id="btnExercise"
-                                    Text="Make Report"
-                                    OnClick="ButtonWasClicked"
-                                    runat="server"></asp:Button>
-                    </form>
-                    
-                    </div>*@
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Register", "index", "register")</li>
-                        <li>@Html.ActionLink("Login", "index", "Login")</li>
-                        @*<li>@Html.ActionLink("Add Medicine", "Index", "AddMedicines")</li>
-                <li>@Html.ActionLink("Add Pharmacist", "Index", "AddPharmacists")</li>
-                <li>@Html.ActionLink("Update Pharmacist", "Index", "UpdatePharmacists")</li>
-                <li>@Html.ActionLink("Update Medicine", "Index", "UpdateMedicines")</li>
-                <li>@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</li>*@
-                    </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Register", "index", "register")</li>
+                    <li>@Html.ActionLink("Login", "index", "Login")</li>
+                    @*<li>@Html.ActionLink("Add Medicine", "Index", "AddMedicines")</li>
+            <li>@Html.ActionLink("Add Pharmacist", "Index", "AddPharmacists")</li>
+            <li>@Html.ActionLink("Update Pharmacist", "Index", "UpdatePharmacists")</li>
+            <li>@Html.ActionLink("Update Medicine", "Index", "UpdateMedicines")</li>
+            <li>@Html.ActionLink("Delete Medicine", "Index", "deleteMedicines")</li>*@
+                </ul>
 
             </div>
         </div>
