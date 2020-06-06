@@ -161,6 +161,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AddCustomersController.cs" />
     <Compile Include="Controllers\AddMedicinesController.cs" />
     <Compile Include="Controllers\AddOrderController.cs" />
     <Compile Include="Controllers\deleteCustomersController.cs" />
@@ -181,6 +182,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>medicineDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="medicine_report.aspx.cs">
+      <DependentUpon>medicine_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicine_report.aspx.designer.cs">
+      <DependentUpon>medicine_report.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202005152206184_CreatePharmacist.cs" />
     <Compile Include="Migrations\202005152206184_CreatePharmacist.designer.cs">
@@ -210,13 +218,6 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Pharmacist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="showreport.aspx.cs">
-      <DependentUpon>showreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="showreport.aspx.designer.cs">
-      <DependentUpon>showreport.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +294,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="medicine_report.aspx" />
     <Content Include="obj\Debug\Pharmacy.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Pharmacy.dll" />
     <Content Include="obj\Debug\Pharmacy.pdb" />
@@ -337,7 +339,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="showreport.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -399,6 +400,9 @@
     <Content Include="Views\UpdateCustomer\Index.cshtml" />
     <Content Include="Views\UpdateCustomer\Details.cshtml" />
     <Content Include="Views\UpdateCustomer\Edit.cshtml" />
+    <Content Include="Views\AddCustomers\Create.cshtml" />
+    <Content Include="Views\AddCustomers\Details.cshtml" />
+    <Content Include="Views\AddCustomers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
@@ -412,7 +416,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>

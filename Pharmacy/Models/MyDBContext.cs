@@ -13,6 +13,7 @@ namespace Pharmacy.Models
         public DbSet<Order> orders { get; set; }
         public DbSet<Customer> customers { get; set; }
 
+      
     }
 
 
