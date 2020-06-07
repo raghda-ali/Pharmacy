@@ -18,6 +18,7 @@ namespace Pharmacy.Controllers
         public ActionResult Index()
         {
             var orders = db.orders.Include(o => o.Medicine);
+
             return View(orders.ToList());
         }
 

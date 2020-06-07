@@ -23,22 +23,25 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
+
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Medicine.name)
         </td>
         <td>
+            @item.Bill(item.total_price)
             @Html.DisplayFor(modelItem => item.total_price)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.amount)
         </td>
         @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.medicine_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.medicine_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.medicine_id })
-        </td>*@
+                @Html.ActionLink("Edit", "Edit", new { id=item.medicine_id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.medicine_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.medicine_id })
+            </td>*@
     </tr>
 }
 

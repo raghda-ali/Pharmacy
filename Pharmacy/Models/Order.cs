@@ -15,6 +15,11 @@ namespace Pharmacy.Models
         public double total_price { get;set;}
         public float amount { get; set; }
         public virtual Medicine Medicine{ get; set; }
+        public double Bill(double total_price)
+        {
+            total_price = Medicine.price * amount;
+            return total_price;
+        }
 
     }
 }
