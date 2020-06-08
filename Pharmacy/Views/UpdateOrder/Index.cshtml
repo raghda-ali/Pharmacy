@@ -27,7 +27,9 @@
                 @Html.DisplayFor(modelItem => item.medicine_id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.total_price)
+                @item.Bill(item.total_price)
+
+                @*@Html.DisplayFor(modelItem => item.total_price)*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.amount)
